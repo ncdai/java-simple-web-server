@@ -1,0 +1,137 @@
+body {
+  background-color: #fafafa;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.page-header {
+  padding: 32px 0;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.login-form {
+  h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+.member-item {
+  position: relative;
+  border-radius: 8px 8px 0 0;
+  background-color: #fff;
+  overflow: hidden;
+
+  &-body {
+    display: flex;
+    align-items: center;
+    padding: 32px;
+
+    &-avatar {
+      position: relative;
+      overflow: hidden;
+
+      width: 128px;
+      height: 128px;
+      margin-right: 32px;
+      border-radius: 64px;
+
+      img {
+        width: 128px;
+        height: 128px;
+      }
+    }
+
+    &-info {
+      flex: 1;
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: #9b9b9b;
+        margin-bottom: 16px;
+      }
+
+      &-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+
+        li {
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+
+            background-color: #000;
+            color: #fff;
+
+            svg {
+              width: auto;
+              height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-footer {
+    position: relative;
+
+    &.color-ncdai {
+      border-bottom: 8px solid #18BA4F;
+    }
+
+    &.color-vdminh {
+      border-bottom: 8px solid #FFEE58;
+    }
+
+    &.color-ncdai &-pattern {
+      color: rgba(24, 186, 79, 0.1);
+    }
+
+    &.color-vdminh &-pattern {
+      color: rgba(255, 238, 88, 0.16);
+    }
+
+    &-pattern {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      pointer-events: none;
+      overflow: hidden;
+
+      > * {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        transform-origin: top center;
+        transform: scale(2);
+      }
+    }
+  }
+}
+
